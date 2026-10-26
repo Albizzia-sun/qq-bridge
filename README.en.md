@@ -11,6 +11,7 @@ The detailed installation documentation is in Chinese:
 - [README and quick start](README.md)
 - [External prerequisites](docs/PREREQUISITES.md)
 - [Configuration and API keys](docs/CONFIGURATION.md)
+- [RAG, long-term memory and MemOS Shadow](docs/RAG_MEMORY.md)
 - [Cloud deployment](docs/CLOUD_DEPLOYMENT.md)
 - [User-defined roles](roles/README.md)
 

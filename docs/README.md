@@ -2,6 +2,7 @@
 
 - [外部组件与配置准备清单](PREREQUISITES.md)
 - [配置字段与 API Key](CONFIGURATION.md)
+- [RAG、长期记忆与 MemOS Shadow](RAG_MEMORY.md)
 - [云服务器部署](CLOUD_DEPLOYMENT.md)
 - [目录与本地数据位置](FOLDER_MAP.md)
 - [角色创建](../roles/README.md)

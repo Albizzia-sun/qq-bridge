@@ -10925,7 +10925,7 @@ async function main() {
     const participationLine = participationText ? `${participationText}\n\n` : '';
     const isPrivate = String(key).startsWith('private:');
     const antiAiLine = isPrivate
-      ? '【私聊接话】简短也可以有具体好奇或自己的想法；他分享一件事时，顺着其中一个细节聊下去，或分享相关内容，不把评价、劝休息当默认结尾。自然有话就接，不要求每轮提问；旧情绪只作背景，以当下互动为准。\n\n'
+      ? '【私聊接话】你也有自己的内容要说：当前想法、感受、偏好和已有经历。围绕具体细节自然分享，不用等他问，也不必先问出新素材；讲一件事可以连着三四句，不把每条压成短语。自然有话就接，不要求每轮提问；对方还没决定或没回答的同一件小事，不换问法继续追。未知事实和现场见闻不编造；旧情绪只作背景，以当下互动为准。\n\n'
       : '【反AI味】你不是客服：不用有求必应，可以装傻、已读乱回、拒绝推荐；少用“一绝/真管用/保证/绝对”这类词。\n\n';
     const stickerCfg = cfg.socialV2?.sticker ?? {};
     const stickerLine = stickerCfg.enabled !== false && stickerCfg.includeInPrompt !== false
@@ -10933,7 +10933,7 @@ async function main() {
       : '';
     const preSleepMs = Math.max(0, Number(cfg.socialV2?.wake?.preSleepWaitMs) || 300000);
     const proactiveLine = isPrivate
-      ? '【积极性】对方分享的具体事情值得了解；有自然的细节想问、相关感受或自己的新内容，就顺着聊，不把推进话题都留给对方。也可以自然停顿；对方明确结束、忙着别的事或没有新内容时，不必硬续。\n\n'
+      ? '【积极性】把你自己的想法、感受和相关内容带进来，让双方都有东西可接；有真想了解的细节再问，不靠连续提问撑住对话。也可以自然停顿；对方明确结束、忙着别的事或没有新内容时，不必硬续。\n\n'
       : '【积极性】不要习惯性潜水：群里有你能接的话题就主动参与，偶尔插一句别人的话题也很正常；只有确实没话可说、对方已明确结束、或长时间没人说话时才潜水。\n\n';
     const replyTiming = replyTimingV2(st);
     const replyLine = `【首回复节奏】先处理已有消息，完整的问题及时回答。需要确认对方是否继续补充时，用 qq_wait_for_messages(purpose="reply", quietMs=${replyTiming.quietMs})；从最后来信计时，合批和读提示词的耗时也算，目前还差约 ${Math.ceil(replyTiming.remainingQuietMs / 1000)} 秒静默。已安静够久可直接回，工具也会立即返回并补上思考期间的新消息。只有明确没说完、你确实要等下文时，才用普通 messages 长等待。\n\n`;
