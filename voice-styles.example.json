@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "defaultStyle": "",
+  "styles": {
+    "daily": {
+      "label": "",
+      "whenToUse": "",
+      "instruction": ""
+    },
+    "comfort": {
+      "label": "",
+      "whenToUse": "",
+      "instruction": ""
+    },
+    "explanation": {
+      "label": "",
+      "whenToUse": "",
+      "instruction": ""
+    }
+  }
+}
